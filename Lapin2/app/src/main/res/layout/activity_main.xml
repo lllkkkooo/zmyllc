@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.lapin.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <RadioGroup
+            android:id="@+id/main_activity_rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+            <RadioButton
+                android:id="@+id/main_activity_rb_lapin"
+                android:layout_width="0dp"
+                android:drawableTop="@drawable/main_lapin_rg"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:button="@null"
+                android:text="辣品"
+                android:textColor="@drawable/textcolor"
+                android:textSize="10dp"
+                android:onClick="btnClick"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/main_activity_rb_category"
+                android:layout_width="0dp"
+                android:drawableTop="@drawable/main_category_rg"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:button="@null"
+                android:text="分类"
+                android:textColor="@drawable/textcolor"
+                android:textSize="10dp"
+                android:onClick="btnClick"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/main_activity_rb_me"
+                android:layout_width="0dp"
+                android:drawableTop="@drawable/main_me_rg"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:button="@null"
+                android:text="我"
+                android:textSize="10dp"
+                android:onClick="btnClick"
+                android:textColor="@drawable/textcolor"
+                android:layout_height="match_parent" />
+        </RadioGroup>
+        <FrameLayout
+            android:id="@+id/main_activity_continear"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/main_activity_rg">
+        </FrameLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
