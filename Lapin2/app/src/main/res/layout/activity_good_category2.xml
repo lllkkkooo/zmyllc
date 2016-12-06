@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.lapin.GoodCategory2Activity">
+<RelativeLayout
+    android:background="#FFEE0707"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <ImageView
+        android:src="@mipmap/abc_ic_ab_back_mtrl_am_alpha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/good_category2_back"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+
+        android:layout_alignParentStart="true" />
+    <EditText
+        android:layout_toRightOf="@+id/good_category2_back"
+        android:id="@+id/good_category2_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/good_category2_search"
+        android:hint="搜索"
+        android:textColorHint="#ffffff"
+        android:drawableRight="@mipmap/search_nav_qr"/>
+
+    <ImageView
+        android:src="@mipmap/abc_ic_search_api_mtrl_alpha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/good_category2_search"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:background="#848181"
+            android:id="@+id/textView"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:drawableRight="@mipmap/toggle_down"
+            android:id="@+id/good_category2_category_txt"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/textView"
+            android:layout_toStartOf="@+id/textView"
+            android:layout_marginRight="100dp"
+            android:layout_marginEnd="100dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="商城"
+            android:drawableRight="@mipmap/toggle_down"
+            android:id="@+id/good_category2_shop_txt"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/textView"
+            android:layout_toEndOf="@+id/textView"
+            android:layout_marginLeft="100dp"
+            android:layout_marginStart="100dp" />
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/good_category2_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+</LinearLayout>
