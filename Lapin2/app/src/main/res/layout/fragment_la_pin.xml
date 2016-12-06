@@ -1,13 +1,31 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.administrator.lapin.fragment.LaPinFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/laPing_toobar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="#f44c4c">
+    <android.support.design.widget.TabLayout
+        android:id="@+id/laPing_tablayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:tabIndicatorColor="#f4ecec"
+        app:tabIndicatorHeight="3dp"
+        app:tabTextColor="#d9d0d0"
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabTextAppearance="@style/toobarTextSize">
+        >
+    </android.support.design.widget.TabLayout>
+  </android.support.v7.widget.Toolbar>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/laPing_viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="辣品" />
+        android:layout_below="@id/laPing_toobar"/>
 
-</FrameLayout>
+</RelativeLayout>

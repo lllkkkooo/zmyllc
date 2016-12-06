@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="btn_color">#000000</color>
     <color name="btn_select_color">#ee0707</color>
+    <color name="radio_selected">#eee</color>
 </resources>

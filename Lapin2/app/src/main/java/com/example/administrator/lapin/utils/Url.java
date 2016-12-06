@@ -5,8 +5,13 @@ package com.example.administrator.lapin.utils;
  */
 public class Url {
     //获取辣品-全部-头部的viewpager
-    public static String getLaPinHeader(){
-        String header="http://api.lapin365.com/api/lapinapp/focus";
+    public static String getLaPinHeader(int type){
+        String header=null;
+        if(type==0) {
+             header = "http://api.lapin365.com/";
+        }else if(type==1){
+             header="api/lapinapp/focus";
+        }
         return  header;
     }
     //今日爆品：
@@ -87,5 +92,9 @@ public class Url {
     public static String threePageGuess(String remove){
         String guess="http://api.lapin365.com/api/lapinapp/douzaimai?count=5&remove="+remove;
         return guess;
+    }
+    public static  String getImg(){
+        String imgHeader="http://img.lapin365.com/productpictures/";
+        return imgHeader;
     }
 }
