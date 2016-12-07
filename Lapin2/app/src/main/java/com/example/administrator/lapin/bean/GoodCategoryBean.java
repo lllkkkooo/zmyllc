@@ -1,11 +1,12 @@
 package com.example.administrator.lapin.bean;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by Administrator on 2016/12/5.
  */
-public class GoodCategoryBean {
+public class GoodCategoryBean implements Serializable{
 
     /**
      * success : true
@@ -48,7 +49,7 @@ public class GoodCategoryBean {
         this.content = content;
     }
 
-    public static class ContentBean {
+    public static class ContentBean implements Serializable{
         private int Id;
         private String Name;
         private String Token;

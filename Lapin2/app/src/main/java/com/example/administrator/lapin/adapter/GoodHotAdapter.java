@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.example.administrator.lapin.R;
 import com.example.administrator.lapin.bean.GoodHotBean;
-import com.example.administrator.lapin.utils.Url;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -56,7 +55,7 @@ public class GoodHotAdapter extends BaseAdapter {
             viewHolder= (ViewHolder) convertView.getTag();
         }
         viewHolder.txt.setText(datas.get(position).getName());
-        Picasso.with(context).load(Url.allcategory()+datas.get(position).getLogo()).into(viewHolder.iv);
+        Picasso.with(context).load("http://img.lapin365.com/productpictures"+datas.get(position).getApplogo()).into(viewHolder.iv);
         return convertView;
     }
     class ViewHolder{

@@ -32,7 +32,7 @@ public class Good_Category_Fragment extends Fragment {
     private GridView mGridView;
     private List<GoodCategoryBean.ContentBean> datas = new ArrayList<>();
     private GoodCategoryAdapter mAdapter;
-
+private GoodCategoryBean goodCategoryBean;
     public Good_Category_Fragment() {
         // Required empty public constructor
     }
@@ -57,8 +57,9 @@ public class Good_Category_Fragment extends Fragment {
         mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                bundle.putInt("id", datas.get(position).getId());
-                bundle.putString("name", datas.get(position).getName());
+                bundle.putSerializable("category",goodCategoryBean);
+               bundle.putInt("id", datas.get(position).getId());
+                bundle.putString("name",datas.get(position).getName());
                 intent.putExtras(bundle);
                 startActivity(intent);
             }
@@ -73,7 +74,7 @@ public class Good_Category_Fragment extends Fragment {
         goodCategoryInterface.setData().enqueue(new Callback<GoodCategoryBean>() {
             @Override
             public void onResponse(Call<GoodCategoryBean> call, Response<GoodCategoryBean> response) {
-                GoodCategoryBean goodCategoryBean = response.body();
+                 goodCategoryBean = response.body();
                 datas.addAll(goodCategoryBean.getContent());
 
                 mAdapter.notifyDataSetChanged();

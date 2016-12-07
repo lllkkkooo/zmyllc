@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <ImageView
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/good_category2_item_picture"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="name"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:id="@+id/good_category2_item_productname"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/good_category2_item_picture"
+        android:layout_toEndOf="@+id/good_category2_item_picture" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="info"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="#ed1111"
+        android:id="@+id/good_category2_item_info"
+        android:layout_alignBottom="@+id/good_category2_item_picture"
+        android:layout_toRightOf="@+id/good_category2_item_picture"
+        android:layout_toEndOf="@+id/good_category2_item_picture" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="time"
+        android:paddingLeft="5dp"
+        android:textColor="#777575"
+        android:id="@+id/good_category2_item_time"
+        android:layout_alignBottom="@+id/good_category2_item_info"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="storeName"
+        android:textColor="#777575"
+        android:id="@+id/good_category2_item_storeName"
+        android:layout_alignBottom="@+id/good_category2_item_time"
+        android:layout_toLeftOf="@+id/good_category2_item_time"
+        android:layout_toStartOf="@+id/good_category2_item_time" />
+</RelativeLayout>

@@ -54,10 +54,11 @@ public class Good_Hot_Fragment extends Fragment {
         goodHotInterface.setData().enqueue(new Callback<GoodHotBean>() {
             @Override
             public void onResponse(Call<GoodHotBean> call, Response<GoodHotBean> response) {
+                if (response!=null){
                 GoodHotBean goodHotBean = response.body();
                 datas.addAll(goodHotBean.getContent());
-
                 mAdapter.notifyDataSetChanged();
+                }
             }
 
             @Override
